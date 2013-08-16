@@ -1,0 +1,11 @@
+.white.span8.course-card(class = course.month)
+  .span6
+    h2.title= course.name 
+      span#selecteddate
+    span.course-description= course.description 
+  .span2
+    h4= course.date
+    hr
+    a.btn.btn-info.btn-primary.btn-block(href= course.summary) Ver temario
+    hr
+    a.btn.btn-warning.btn-block(href='/capacitaciones/inscripcion') ¡Inscribirme!

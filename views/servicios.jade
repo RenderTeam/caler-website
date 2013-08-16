@@ -1,0 +1,110 @@
+extends layout
+
+block content
+  - var norm
+  - var service
+
+  .container.text-center
+    .span12.service-titles.service-menu.hidden-phone
+      .span4
+        a(data-anchor-id='#Cursos'):.hero-unit.course
+          h2 Cursos
+      .span4
+        a(data-anchor-id='#Asesorias'):.hero-unit.advice
+          h2 Asesorías
+      .span4
+        a(data-anchor-id='#Auditorias'):.hero-unit.audit
+          h2 Auditorías
+
+    .span12.service-titles.visible-phone
+      .span4
+        a(data-anchor-id='#Cursos'):.hero-unit.course
+          h2 Cursos
+      .span4
+        a(data-anchor-id='#Asesorias'):.hero-unit.advice
+          h2 Asesorías
+      .span4
+        a(data-anchor-id='#Auditorias'):.hero-unit.audit
+          h2 Auditorías
+
+    .span12.service-titles
+      .span4
+        hr
+      .span4
+        h2
+          img(src='/images/iconoCaler.png', alt="Logo").pull-left
+          span Servicios
+          img(src='/images/iconoCaler.png', alt="Logo").pull-right
+      .span4
+        hr
+
+    .span12.text-left.service-text-container
+      h1 ¿Qué le ofrece 
+        b CALER
+        ?
+      br
+      article En CALER
+        sup ®
+        |  ofrecemos consultoría especializada y personalizada en el desarrollo e implantación de los sistemas de gestión de la calidad, especialmente con el enfoque de acreditación o certificación, con el fin de demostrar que se cuenta con un sistema de gestión de la calidad documentado, implantado y en mejora continua.
+      br
+      article Consultoría específica para la implantación de sistemas de gestión de la calidad en laboratorios de ensayo, calibración, clínicos, laboratorios forenses así como bancos de sangre.
+      br
+      article Desarrollo de proyectos integrales de implantación de sistemas de gestión a realizar de acuerdo a sus necesidades y recursos en laboratorios de ensayo, calibración, clínicos, laboratorios forenses así como bancos de sangre.
+    
+    include back-to-top
+
+    .span1.breaker#Cursos
+
+    service = {title: 'Cursos'}
+    include service-titles
+
+    .span12.text-left.service-text-container
+      br
+      article En CALER
+        sup ®
+        |  ponemos a su disposición cursos de capacitación en las normas de acreditación de laboratorios ISO/IEC 17025:2005 e ISO 15189:2012, incluyendo los criterios de aplicación de las mismas, así como políticas respecto a temas de trazabilidad, incertidumbre y ensayos de aptitud.
+      br
+      article *Redactar informacion especifica de como funcionan los cursos*
+      br
+
+    norm = {flag:'0',link17025: 'cursos/ISO17025',link15189: 'cursos/ISO15189'}
+    include service-description
+
+    include back-to-top
+
+    .span1.breaker#Asesorias
+
+    service = {title: 'Asesorias'}
+    include service-titles
+
+    norm = {flag:'1',link17025: 'asesorias/ISO17025',link15189: 'asesorias/ISO15189',link9001: 'asesorias/ISO9001'}
+    include service-description
+
+    include back-to-top
+
+    .span1.breaker#Auditorias
+
+    service = {title: 'Auditorías'}
+    include service-titles
+
+    .span12.text-left.service-text-container
+      br
+      article En CALER
+        sup ®
+        |  ofrecemos auditorías de diagnóstico para laboratorios que inician con la implantación de su sistema de gestión de la calidad.
+      br
+      article Auditorías internas (realizadas por externos) para laboratorios que ya cuentan con un sistema de gestión de la calidad implantado e incluso ya acreditado o certificado.
+      br
+
+    norm = {flag:'0',link17025: 'auditorias/ISO17025',link15189: 'auditorias/ISO15189'}
+    include service-description
+
+block custom-scripts
+  //for development. We use local scripts
+  script(src='javascripts/angular/angular.min.js')
+  script(src='javascripts/jquery/jquery.min.js')
+  //- for production. We use cdn minified scripts.
+      tab back twice to add them to the page and comment 
+      or delete the local links
+      script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js')
+      script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
