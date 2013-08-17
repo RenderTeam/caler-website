@@ -8,7 +8,7 @@ block content
   .menu
     .container.clearfix
       .grid_6#caler
-        img(src='images/calerNav.png')
+        img(src='images/calerNav.png',width=200, height=54)
       .grid_6.omega#nav
         ul.navigation
           li(data-slide='1') #{data_slide_1}
@@ -16,10 +16,7 @@ block content
           li(data-slide='3') #{data_slide_3}
           li(data-slide='4') #{data_slide_4}
         hr.clearer
-        .grid_5.top-padded
-          span.back
-           a(href='/') Regresar
-        .grid_6.slogan
+        .slogan
           sup
             sup ┌
           |SU SOLUCIÓN EN
@@ -27,9 +24,12 @@ block content
           | &nbsp;&nbsp;SISTEMAS DE GESTIÓN
           sub
             sub ┘
+        .top-padded
+          span.back
+           a(href='/') Regresar
   .slide#slide1(data-slide='1', data-stellar-background-ratio='0.5')
     .container.clearfix
-      .content.grid_7
+      .content.grid_12
         h1 #{data_slide_1}
         h2 #{firstPunchline}
         p  #{firstDescription}
@@ -38,19 +38,31 @@ block content
     .container.clearfix
       .grid_12#content
         h1 #{data_slide_2}
+        p  #{secondDescription}
+        br
         h2 #{secondPunchline}
   .slide#slide3(data-slide='3', data-stellar-background-ratio='0.5')
     .container.clearfix
       .content#grid_12
         h1 #{data_slide_3}
-        h2 #{thirdPunchline}
+        h3 #{thirdPunchline}
+        br
+        h4 Integridad
+        p  Actuamos con respeto, honradez y congruencia basados en la veracidad de nuestras acciones y palabras; con un enfoque de evidencia objetiva.
+  
+        h4 Servicio personalizado
+        p  Mantenemos una actitud permanente de colaboración,  para dar atención y solución a las necesidades de nuestros clientes.
 
-        .grid_12#test 
-          &nbsp; 12  
+        h4 Competencia técnica
+        p  Aplicamos con aptitud nuestros conocimientos técnicos para dar  solución a las necesidades de nuestros clientes, respecto a la aplicación de  normas y criterios de evaluación de la conformidad.
+        
+        h4 Trabajo en equipo
+        p  Colaboramos mutuamente cumpliendo estratégicamente los procedimientos y metodologías establecidos en nuestro sistema de gestión, para lograr la  política de calidad, misión, visión y objetivos de CALER Consultoría.
+
+        h4 Mejora continua 
+        p  En CALER Consultoría aumentamos  constantemente las capacidades de nuestro personal, la eficiencia de nuestros procesos, la confianza en las relaciones con nuestros clientes y la satisfacción de los mismos; mediante el estudio, análisis, experiencia y la generación de  soluciones eficaces. 
   .slide#slide4(data-slide='4', data-stellar-background-ratio='0.5')
     .container.clearfix
       .content#grid_12
-        h1 #{data_slide_3}
-        h2 #{thirdPunchline}
-        .grid_12#test 
-          &nbsp; 12
+        h1 #{data_slide_4}
+        h2 #{fourthPunchline}

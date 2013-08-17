@@ -15,22 +15,22 @@ exports.caler = function(req, res){
   res.render('caler', 
     { 
       title: 'Caler',
-      data_slide_1: 'YOLO',
-      data_slide_2: 'parallax',
-      data_slide_3: 'SWAG',
-      data_slide_4: 'YOLOSWAG',
-      firstDescription : 'descripción de el stuff',
-      firstExtendedDescription: 'extensión de la descripción',
-      firstPunchline   : 'esta es un punchline',
-      fourthDescription : 'descripción de el stuff',
-      fourthExtendedDescription: 'extensión de la descripción',
-      fourthPunchline   : 'esta es un punchline',
-      secondDescription : 'descripción de el stuff',
-      secondExtendedDescription: 'extensión de la descripción',
-      secondPunchline   : 'esta es un punchline',
+      data_slide_1: 'Misión',
+      data_slide_2: 'Visión',
+      data_slide_3: 'Valores',
+      data_slide_4: 'Logo',
+      firstDescription : 'Proporcionar de forma personalizada servicios especializados de capacitación, auditorías,  asesoría e implementación de sistemas de gestión,  a los organismos de evaluación de la conformidad, con el fin de lograr una relación mutuamente beneficiosa, en la que CALER Consultoría sea coparticipe en el logro de  sus objetivos.',
+      firstExtendedDescription: '',
+      firstPunchline   : '',
+      fourthDescription : 'Descripción del logo',
+      fourthExtendedDescription: '',
+      fourthPunchline   : '',
+      secondDescription : 'Llegar a ser en México y Centro América',
+      secondExtendedDescription: '',
+      secondPunchline   : '“Su solución en sistemas de gestión”',
       thirdDescription : 'descripción de el stuff',
       thirdExtendedDescription: 'extensión de la descripción',
-      thirdPunchline   : 'esta es un punchline'
+      thirdPunchline   : '“Prepárate hoy, actúa mañana, revisa tu resultados y cambia la forma de hacer las cosas”.'
     }
   );
 };
@@ -82,3 +82,4 @@ exports.auditoriasISO15189 = function(req, res){
 exports.inscripcion = function(req, res){
   res.render('capacitaciones/inscripcion', {title: 'Caler'});
 };
+
