@@ -1,68 +1,82 @@
-extends bootkitten
+doctype 5
+html(lang='en')
+  head
+    title= title
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    meta(name='google', content='notranslate')
 
-block custom-stylesheets
-  link(rel='stylesheet', href='stylesheets/own/calerax.css',
-       media='screen')
+    link(href='/stylesheets/bootstrap/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/bootstrap/responsive.css', rel='stylesheet')
+    link(href='/stylesheets/own/index.css', rel='stylesheet')
 
-block content
-  .menu
-    .container.clearfix
-      .grid_6#caler
-        img(src='images/calerNav.png',width=200, height=54)
-      .grid_6.omega#nav
-        ul.navigation
-          li(data-slide='1') #{data_slide_1}
-          li(data-slide='2') #{data_slide_2}
-          li(data-slide='3') #{data_slide_3}
-          li(data-slide='4') #{data_slide_4}
-        hr.clearer
-        .slogan
-          sup
-            sup ┌
-          |SU SOLUCIÓN EN
-          br
-          | &nbsp;&nbsp;SISTEMAS DE GESTIÓN
-          sub
-            sub ┘
-        .top-padded
-          span.back
-           a(href='/') Regresar
-  .slide#slide1(data-slide='1', data-stellar-background-ratio='0.5')
-    .container.clearfix
-      .content.grid_12
-        h1 #{data_slide_1}
-        h2 #{firstPunchline}
-        p  #{firstDescription}
-        p  #{firstExtendedDescription}
-  .slide#slide2(data-slide='2', data-stellar-background-ratio='0.5')
-    .container.clearfix
-      .grid_12#content
-        h1 #{data_slide_2}
-        p  #{secondDescription}
-        br
-        h2 #{secondPunchline}
-  .slide#slide3(data-slide='3', data-stellar-background-ratio='0.5')
-    .container.clearfix
-      .content#grid_12
-        h1 #{data_slide_3}
-        h3 #{thirdPunchline}
-        br
-        h4 Integridad
-        p  Actuamos con respeto, honradez y congruencia basados en la veracidad de nuestras acciones y palabras; con un enfoque de evidencia objetiva.
-  
-        h4 Servicio personalizado
-        p  Mantenemos una actitud permanente de colaboración,  para dar atención y solución a las necesidades de nuestros clientes.
+    link(rel='stylesheet', type='text/css', href='/stylesheets/own/caler-pitch-demo.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/own/caler-pitch-style.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/own/caler-pitch-custom.css')
+    link(rel="icon", type="image/png" ,href="/images/iconoCaler.png")
 
-        h4 Competencia técnica
-        p  Aplicamos con aptitud nuestros conocimientos técnicos para dar  solución a las necesidades de nuestros clientes, respecto a la aplicación de  normas y criterios de evaluación de la conformidad.
-        
-        h4 Trabajo en equipo
-        p  Colaboramos mutuamente cumpliendo estratégicamente los procedimientos y metodologías establecidos en nuestro sistema de gestión, para lograr la  política de calidad, misión, visión y objetivos de CALER Consultoría.
-
-        h4 Mejora continua 
-        p  En CALER Consultoría aumentamos  constantemente las capacidades de nuestro personal, la eficiencia de nuestros procesos, la confianza en las relaciones con nuestros clientes y la satisfacción de los mismos; mediante el estudio, análisis, experiencia y la generación de  soluciones eficaces. 
-  .slide#slide4(data-slide='4', data-stellar-background-ratio='0.5')
-    .container.clearfix
-      .content#grid_12
-        h1 #{data_slide_4}
-        h2 #{fourthPunchline}
+    script(type='text/javascript', src='/javascripts/modernizer/modernizr.custom.79639.js')
+    noscript
+      link(rel='stylesheet', type='text/css', href='/stylesheets/own/caler-pitch-styleNoJS.css')
+    body
+      include main-navbar
+      .container.demo-1
+        #slider.sl-slider-wrapper
+          .sl-slider
+            .sl-slide.bg-1(data-orientation='horizontal', data-slice1-rotation='-25', data-slice2-rotation='-25', data-slice1-scale='2', data-slice2-scale='2')
+              .sl-slide-inner
+                .deco.mision
+                h2 Misión
+                blockquote
+                  p
+                    | Proporcionar de forma personalizada servicios especializados de capacitación, auditorías, asesoría e implementación de sistemas de gestión, a los organismos de evaluación de la conformidad, con el fin de lograr una relación mutuamente beneficiosa, en la que CALER Consultoría sea coparticipe en el logro de sus objetivos.
+            .sl-slide.bg-2(data-orientation='vertical', data-slice1-rotation='10', data-slice2-rotation='-15', data-slice1-scale='1.5', data-slice2-scale='1.5')
+              .sl-slide-inner
+                .deco.vision
+                h2 Visión
+                blockquote
+                  p Llegar a ser en México y Centro América
+                  h1 “Su solución en sistemas de gestión”
+            .sl-slide.bg-3(data-orientation='horizontal', data-slice1-rotation='3', data-slice2-rotation='3', data-slice1-scale='2', data-slice2-scale='1')
+              .sl-slide-inner
+                .deco.values(data-icon='O')
+                h2 Valores
+                blockquote
+                  b Integridad
+                  br
+                  b Servicio personalizado 
+                  br
+                  b Competencia técnica 
+                  br
+                  b Trabajo en equipo
+                  br
+                  b Mejora continua
+                  br
+                  br
+                  p “Prepárate hoy, actúa mañana, revisa tu resultados y cambia la forma de hacer las cosas”.
+            .sl-slide.bg-4(data-orientation='vertical', data-slice1-rotation='-5', data-slice2-rotation='25', data-slice1-scale='2', data-slice2-scale='1')
+              .sl-slide-inner
+                .deco.logo(data-icon='I')
+                h2 Logo
+                blockquote
+                  p 
+          //sl-slider 
+          nav#nav-arrows.nav-arrows
+            span.nav-arrow-prev Previous
+            span.nav-arrow-next Next
+          nav#nav-dots.nav-dots
+            span.nav-dot-current
+            span
+            span
+            span
+        //slider-wrapper
+      script(src='/javascripts/jquery/jquery.min.js')
+      script(src='/javascripts/bootstrap/bootstrap.js')
+      script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+      script(src='/javascripts/bootstrap/bootstrap-transition.js')
+      script(src='/javascripts/jquery/jquery.ba-cond.min.js')
+      script(src='/javascripts/jquery/jquery.slitslider.js')
+      script(src='/javascripts/own/caler-pitch-slitSlider.js')
+      script(src='/javascripts/own/indexFunctions.js')

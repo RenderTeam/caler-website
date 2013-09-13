@@ -11,41 +11,13 @@ html(lang='es')
     block stylesheets
     link(href='/stylesheets/bootstrap/bootstrap.css', rel='stylesheet')
     link(href='/stylesheets/bootstrap/responsive.css', rel='stylesheet')
-    link(href='http://fonts.googleapis.com/css?family=Oswald',rel='stylesheet', 
-      type='text/css')
     link(href='/stylesheets/own/index.css', rel='stylesheet')
     link(rel="icon", type="image/png" ,href="/images/iconoCaler.png")
 
     block custom-stylesheets
   body
-    div.navbar.navbar.navbar-fixed-top
-      div.navbar-inner
-        div.container-fluid
-          button(class='btn btn-navbar', data-target='.nav-collapse', 
-            data-toggle='collapse', type='button')
-          a.brand
-            img(src='/images/calerNav.png', alt="Logo",width=100)
-          .pull-right.slogan-container
-            sup 
-              sup ┌
-            |SU SOLUCIÓN EN
-            br
-            | &nbsp;&nbsp;SISTEMAS DE GESTIÓN
-            sub
-              sub ┘
-          div.nav-collapse.collapse 
-            ul.nav#mainSiteNav
-              li.active
-                a.activeA(href='/') Inicio
-              li
-                a.activeA(href='/caler') ¿Quiénes somos?
-              li
-                a.activeA(href='/servicios') Servicios
-              li
-                a.activeA(href='/capacitaciones') Capacitaciones
-              li
-                a.activeA(href='/contacto') Contacto
-              
+    include main-navbar
+
     hr#layoutLine.hidden-phone
 
     block content
@@ -53,11 +25,11 @@ html(lang='es')
     include footer
 
     block scripts
-      script(src='javascripts/jquery/jquery.min.js')
-      script(src='javascripts/bootstrap/bootstrap-carousel.js')
-      script(src='javascripts/bootstrap/bootstrap-collapse.js')
-      script(src='javascripts/bootstrap/bootstrap-transition.js')
-      script(src='javascripts/own/indexGallery.js')        
-      script(src='javascripts/own/indexFunctions.js')
+      script(src='/javascripts/jquery/jquery.min.js')
+      script(src='/javascripts/bootstrap/bootstrap-carousel.js')
+      script(src='/javascripts/bootstrap/bootstrap-collapse.js')
+      script(src='/javascripts/bootstrap/bootstrap-transition.js')
+      script(src='/javascripts/own/indexGallery.js')
+      script(src='/javascripts/own/indexFunctions.js')
         
     block custom-scripts

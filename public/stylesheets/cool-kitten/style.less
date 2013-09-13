@@ -3,7 +3,7 @@
 /* Global */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial,Helvetica,sans-serif;
   font-weight: 400;
   font-size: 1em;
   color: #8a8683;
@@ -90,6 +90,57 @@ h2{
   }
 }
 
+.head{
+  text-align: right;
+  padding-right: 0;
+  margin: 0;
+
+  h1{
+    font-size: 5em;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.head-content{
+  padding-left: 5px;
+  border-left: 2px solid white;
+
+  p{
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+//de derecha a izquierda
+.head-inverted{
+  text-align: left;
+  padding-right: 0;
+  margin: 0;
+  float: right;
+
+  h1{
+    font-size: 5em;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.head-content-inverted{
+  padding-left: 5px;
+  border-right: 2px solid rgb(100,42,11);
+
+  p{
+    text-align: right;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-right: 3px;
+  }
+}
+
 /* General Slides */ 
 
 .slide{
@@ -103,44 +154,50 @@ h2{
 /* Slide 1 */ 
 
 #slide1{
-  background-color:#ffffff;
+  background-image: url(/../images/calerCirculo2.png);
+  background-size: 15%;
+  background-color:#f3924d;
+  color: #fff;
 
   h1, h2{
-    color: #8a8683;
+    color: #fff;
   }
 }
 /**********************************************************/
 /* Slide 2 */ 
 
 #slide2{
-  background-image:url('../../images/hipergraficoCaler.png');
-  background-size: 140% 100%;
-  color:#8a8683;
+  background-image: url(/../images/calerCirculo1.png);
+  background-size: 15%;
+  color:rgb(100,42,11);
 
   h1, h2{
-    color: #8a8683;
+    color: rgb(100,42,11);
+  }
+
+  p{
+    font-weight: 2em;
   }
 }
 /**********************************************************/
 /* Slide 3 */ 
 
 #slide3{
-  background-color:#ffffff;
+  background-color: rgb(6,134,184);
+  color: #fff;
 
   h1,h2{
-    color: #8a8683;
+    color: #fff;
   }
 }
 /**********************************************************/
 /* Slide 4 */
 
 #slide4{
-  background-image:url('../../images/feather.png');
-  background-color:#8a8683;
-  color:#ffffff;
+  color: orange;
 
   h1,h2{
-    color: #ffffff;
+    color:  orange;
   }
 }
 /**********************************************************/
@@ -187,8 +244,12 @@ h2{
     width:100%;
   } 
 
-  #slide1, #slide2, #slide3, #slide4{
-    h1, h2{
+  #slide1,
+  #slide2,
+  #slide3,
+  #slide4{
+    h1,
+    h2{
       line-height: 1em;
     }
   }
@@ -227,8 +288,12 @@ h2{
     padding:150px 0;
   }
 
-  #slide1, #slide2, #slide3, #slide4{
-    h1, h2{
+  #slide1,
+  #slide2,
+  #slide3,
+  #slide4{
+    h1,
+    h2{
       line-height: 1em;
     }
   }

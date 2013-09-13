@@ -10,10 +10,10 @@ block custom-stylesheets
 block content
     
   .container.text-center
-    .span12.service-titles
+    .span11.service-titles
       .span4
         hr
-      .span4
+      .span3
         h3
           img(src='/images/iconoCaler.png', alt="Logo",height="35", width="35").pull-left
           span Capacitaciones
@@ -21,7 +21,7 @@ block content
       .span4
         hr
 
-    .span12.columns-container
+    .span11.columns-container.clearfix
       .span4.calendarWrapper.pull-right.hidden-phone
         include calendar
       - var month = {value: 'julio'};   

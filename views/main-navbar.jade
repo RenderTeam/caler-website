@@ -1,13 +1,27 @@
-  header.navbar.navbar-fixed-top.bs-docs-nav(role='banner')
-  .container
-      .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='') >
-      nav.collapse.navbar-collapse.bs-navbar-collapse(role='navigation')
-        ul.nav.navbar-nav
+div.navbar.navbar.navbar-fixed-top
+  div.navbar-inner
+    div.container-fluid
+      button(class='btn btn-navbar', data-target='.nav-collapse', 
+        data-toggle='collapse', type='button')
+      a.brand
+        img(src='/images/calerNav.png', alt="Logo",width=100)
+      .pull-right.slogan-container
+        sup 
+          sup ┌
+        |SU SOLUCIÓN EN
+        br
+        | &nbsp;&nbsp;SISTEMAS DE GESTIÓN
+        sub
+          sub ┘
+      div.nav-collapse.collapse 
+        ul.nav#mainSiteNav
           li.active
-            a(href='') Getting started
+            a.activeA(href='/') Inicio
+          li
+            a.activeA(href='/caler') ¿Quiénes somos?
+          li
+            a.activeA(href='/servicios') Servicios
+          li
+            a.activeA(href='/capacitaciones') Capacitaciones
+          li
+            a.activeA(href='/contacto') Contacto
