@@ -41,7 +41,7 @@ block content
     .span12.text-left.service-text-container
       h1 ¿Qué le ofrece 
         b CALER
-        ?
+        |?
       br
       article En CALER
         sup ®
@@ -55,7 +55,7 @@ block content
 
     .span1.breaker#Cursos
 
-    service = {title: 'Cursos'}
+    - service = {title: 'Cursos'}
     include service-titles
 
     .span12.text-left.service-text-container
@@ -67,24 +67,24 @@ block content
       article *Redactar informacion especifica de como funcionan los cursos*
       br
 
-    norm = {flag:'0',link17025: 'cursos/ISO17025',link15189: 'cursos/ISO15189'}
+    - norm = {flag:'0',link17025: 'cursos/ISO17025',link15189: 'cursos/ISO15189'}
     include service-description
 
     include back-to-top
 
     .span1.breaker#Asesorias
 
-    service = {title: 'Asesorias'}
+    - service = {title: 'Asesorias'}
     include service-titles
 
-    norm = {flag:'1',link17025: 'asesorias/ISO17025',link15189: 'asesorias/ISO15189',link9001: 'asesorias/ISO9001'}
+    - norm = {flag:'1',link17025: 'asesorias/ISO17025',link15189: 'asesorias/ISO15189',link9001: 'asesorias/ISO9001'}
     include service-description
 
     include back-to-top
 
     .span1.breaker#Auditorias
 
-    service = {title: 'Auditorías'}
+    - service = {title: 'Auditorías'}
     include service-titles
 
     .span12.text-left.service-text-container
@@ -96,7 +96,7 @@ block content
       article Auditorías internas (realizadas por externos) para laboratorios que ya cuentan con un sistema de gestión de la calidad implantado e incluso ya acreditado o certificado.
       br
 
-    norm = {flag:'0',link17025: 'auditorias/ISO17025',link15189: 'auditorias/ISO15189'}
+    - norm = {flag:'0',link17025: 'auditorias/ISO17025',link15189: 'auditorias/ISO15189'}
     include service-description
 
 block custom-scripts
