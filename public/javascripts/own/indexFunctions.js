@@ -18,21 +18,6 @@ function scrollTop(){
       scrollTop: -($(this).offset().top)
   }, 1000);
 }
-  
-function setFixMenu(element,stickyCssClass) { 
-  $(window).scroll(function(){ 
-    var menuTop = $(element).offset(); 
-    // get total scrolling 
-    var htmlTop = $(window).scrollTop(); 
-    if ((htmlTop + 1) > menuTop.top) { 
-      $(element).addClass(stickyCssClass);
-    }
-
-    if(htmlTop < 110){
-      $(element).removeClass(stickyCssClass); 
-    }
-  }); 
-}
 
 function changeVisibleCourses(){
   var i,
@@ -61,15 +46,15 @@ function start(){
     case '':      
       $('#mainSiteNav').find('li').removeClass('active');
       $('#mainSiteNav').find('li:first').addClass('active');
-    break;
+      break;
     case '/caler':
       $('#mainSiteNav').find('li').removeClass('active');
       $('#mainSiteNav').find('li:first').next().addClass('active');
-    break;
+      break;
     case '/contacto':
       $('#mainSiteNav').find('li').removeClass('active');
       $('#mainSiteNav').find('li:last').addClass('active');
-    break;
+      break;
     case '/servicios':
       $('#mainSiteNav').find('li').removeClass('active');
       $('#mainSiteNav').find('li:last').prev().prev().addClass('active');
@@ -77,13 +62,14 @@ function start(){
       $('#layoutLine').remove();
       
       setFixMenu('.service-menu','fixedMenu'); 
-    break;
+      break;
     case '/capacitaciones':
       $('#mainSiteNav').find('li').removeClass('active');
       $('#mainSiteNav').find('li:last').prev().addClass('active');
 
       var month = new Date(),
-      todayDate = 'd' + month.getDate() + '-m' + (month.getMonth() + 1) + '-y' + month.getFullYear();
+      todayDate = 'd' + month.getDate() + '-m' + (month.getMonth() + 1) + '-y' +
+        month.getFullYear();
       createMonth(month);
 
       $('.day-preview').find('.day').find('h1').text(month.getDate());
@@ -95,22 +81,20 @@ function start(){
       $('.arrow-right').on('click', arrowClickChangeMonth);
       $('.calendar-cell').on('click', onPressShowDayAndMonth);
 
-      $('.calendarWrapper').append($('<p class="indicador"></p>'));
-      $('.indicador').css({'position': 'fixed'});
+     /* $('.calendarWrapper').append($('<p class="indicador"></p>'));
+      // $('.indicador').css({'position': 'fixed'});
 
       $(window).scroll(function(){ 
         var indicador = $('.indicador').offset(); 
         // get total scrolling 
         var footer = $('footer').offset();
-        console.log(indicador.top);
-        console.log(footer.top);
         if((indicador.top + 600) < footer.top){
           $('.calendarContainer').css({'position': 'fixed'});
         }else{
           $('.calendarContainer').css({'position': 'relative'});
         }
-      });
-    break;
+      });*/
+      break;
   }
 
   $('.advice').on('click',scrollSmooth);

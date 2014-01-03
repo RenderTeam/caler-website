@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  .container.text-center.top-padded
+    .span12.service-titles
+      .span4
+        hr
+      .span4.image-rotate
+        h2
+          img(src='/images/iconoCaler.png', alt="Logo").pull-left
+          img(src='/images/iconoCaler.png', alt="Logo").pull-right
+          span Cursos
+          br
+      .span4
+        hr
+
+    #accordion.accordion.courses-accordion
+      .accordion-group
+        .accordion-heading.text-left
+          a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', 
+            href='#collapseOne')
+            h4
+              span.course-title Formación de auditores internos
+              span.pull-right 12/13/2014 - 12/15/2014
+        #collapseOne.accordion-body.collapse.in
+          .accordion-inner
+            .text-justify.ghost-after
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu turpis id erat aliquam mollis nec sollicitudin urna. Nunc nec lacinia est, a dapibus risus. Quisque porta ante vel venenatis eleifend. Cras dolor lacus, gravida et placerat non, porta quis neque. Nam porttitor sed sem porta tristique. Aenean quis tempor turpis, id elementum nisi. Nunc interdum ut nulla hendrerit pharetra.
+              ul.pager
+                li
+                  a( href = '', target = '_blank' ) 
+                    |Descargar temario &darr;
+                li
+                  a( href = '/contacto' ) Contacto / Inscripción
+
+      .accordion-group
+        .accordion-heading
+          a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', 
+            href='#collapseTwo')
+            | Collapsible Group Item #2
+        #collapseTwo.accordion-body.collapse
+          .accordion-inner
+            | Anim pariatur cliche...

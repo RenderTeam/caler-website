@@ -6,9 +6,14 @@ a:hover{
   text-decoration: none;
 }
 
+html, body{
+  min-height: 100%;
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:#2C77B8;
+  margin-top: 50px;
 }
 
 .breaker{
@@ -209,9 +214,11 @@ footer{
 }
 
 .service-titles{
+  padding: 0;
+  margin: 0;
   .span4{
-    margin-right:0;
-    margin-left: 0;
+    margin-right:5px;
+    margin-left: 5px;
     padding: 5px;
 
     .hero-unit{
@@ -251,5 +258,25 @@ footer{
 .service-menu{
   .span4{
     padding-top: 0;
+  }
+}
+
+.courses-accordion{
+  .accordion-heading{
+    h4{
+      .course-title{
+        color: #FF8C35;
+      }
+    }
+  }
+
+  .spread-buttons{
+    width: 100%;
+    display: inline-block;
+  }
+  .spread-buttons:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
   }
 }

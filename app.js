@@ -34,7 +34,7 @@ app.get('/caler', routes.caler);
 app.get('/capacitaciones', routes.capacitaciones);
 app.get('/contacto', routes.contacto);
 app.get('/servicios', routes.servicios);
-app.get('/users', user.list);
+app.get('/capacitaciones/cursos', routes.courses);
 app.get('/asesorias/ISO17025', routes.asesoriasISO17025);
 app.get('/asesorias/ISO15189', routes.asesoriasISO15189);
 app.get('/asesorias/ISO9001', routes.asesoriasISO9001);
@@ -42,7 +42,6 @@ app.get('/cursos/ISO17025', routes.cursosISO17025);
 app.get('/cursos/ISO15189', routes.cursosISO15189);
 app.get('/auditorias/ISO17025', routes.auditoriasISO17025);
 app.get('/auditorias/ISO15189', routes.auditoriasISO15189);
-app.get('/capacitaciones/inscripcion', routes.inscripcion);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

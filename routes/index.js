@@ -18,8 +18,8 @@ exports.servicios = function ( req, res ){
 exports.capacitaciones = function ( req, res ){
   res.render('capacitaciones'); };
 
-exports.inscripcion = function ( req, res ){
-  res.render('capacitaciones/inscripcion'); };
+exports.courses = function ( req, res ){
+  res.render('capacitaciones/courses'); };
 
 exports.asesoriasISO17025 = function ( req, res ){
   res.render('asesorias/ISO17025'); };
