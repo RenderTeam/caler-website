@@ -1,0 +1,24 @@
+.accordion-group
+  .accordion-heading.text-left
+    a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', 
+      href= '#' + 'curso' + course.id)
+      h5
+        span &darr;&nbsp;
+        span.course-title= course.name
+        if course.soon
+          span.pull-right.label.label-info Fechas próximas
+        else 
+          span.pull-right.label.label-important No hay fechas próximas
+
+  .accordion-body.collapse( id= 'curso' + course.id )
+    .accordion-inner
+      .text-justify
+        p= course.description
+        span.pull-right.label.label-success= course.next_date
+        ul.pager
+          li
+            a( href = '/capacitaciones/temarios/curso' + course.id + '.pdf', 
+              target = '_blank' ) 
+              |Descargar temario &darr;
+          li
+            a( href = '/contacto' ) Contacto / Inscripción

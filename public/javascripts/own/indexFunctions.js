@@ -41,61 +41,71 @@ function changeVisibleCourses(){
 function start(){
   //variables
   var urlPathname = window.location.pathname;
+  console.log(urlPathname);
+  if ( !window.location.hash ) {
+    switch(urlPathname){
+      case '':
+        $('#mainSiteNav').find('li').removeClass('active');
+        $('#mainSiteNav').find('li:first').addClass('active');
+        break;
+      case '/caler':
+        $('#mainSiteNav').find('li').removeClass('active');
+        $('#mainSiteNav').find('li:first').next().addClass('active');
+        break;
+      case '/contacto':
+        $('#mainSiteNav').find('li').removeClass('active');
+        $('#mainSiteNav').find('li:last').addClass('active');
+        break;
+      case '/servicios':
+        $('#mainSiteNav').find('li').removeClass('active');
+        $('#mainSiteNav').find('li:last').prev().prev().addClass('active');
+        $('.navbar-fixed-top').css('position', 'static');
+        $('#layoutLine').remove();
+        
+        setFixMenu('.service-menu','fixedMenu'); 
+        break;
+      case '/capacitaciones':
+        $('#mainSiteNav').find('li').removeClass('active');
+        $('#mainSiteNav').find('li:last').prev().addClass('active');
 
-  switch(urlPathname){
-    case '':      
-      $('#mainSiteNav').find('li').removeClass('active');
-      $('#mainSiteNav').find('li:first').addClass('active');
-      break;
-    case '/caler':
-      $('#mainSiteNav').find('li').removeClass('active');
-      $('#mainSiteNav').find('li:first').next().addClass('active');
-      break;
-    case '/contacto':
-      $('#mainSiteNav').find('li').removeClass('active');
-      $('#mainSiteNav').find('li:last').addClass('active');
-      break;
-    case '/servicios':
-      $('#mainSiteNav').find('li').removeClass('active');
-      $('#mainSiteNav').find('li:last').prev().prev().addClass('active');
-      $('.navbar-fixed-top').css('position', 'static');
-      $('#layoutLine').remove();
-      
-      setFixMenu('.service-menu','fixedMenu'); 
-      break;
-    case '/capacitaciones':
-      $('#mainSiteNav').find('li').removeClass('active');
-      $('#mainSiteNav').find('li:last').prev().addClass('active');
+        var month = new Date(),
+        todayDate = 'd' + month.getDate() + '-m' + (month.getMonth() + 1) + '-y' +
+          month.getFullYear();
+        createMonth(month);
 
-      var month = new Date(),
-      todayDate = 'd' + month.getDate() + '-m' + (month.getMonth() + 1) + '-y' +
-        month.getFullYear();
-      createMonth(month);
+        $('.day-preview').find('.day').find('h1').text(month.getDate());
+        $('.day-preview-header').find('.month').text($('.full-month-header-container').find('.span2').find('h2').text());
+        $('.day-preview-header').find('.year').text($('.full-month-header-container').find('.yearPreview').text());
+        $('.' + todayDate).addClass('selectedCell');
 
-      $('.day-preview').find('.day').find('h1').text(month.getDate());
-      $('.day-preview-header').find('.month').text($('.full-month-header-container').find('.span2').find('h2').text());
-      $('.day-preview-header').find('.year').text($('.full-month-header-container').find('.yearPreview').text());
-      $('.' + todayDate).addClass('selectedCell');
+        $('.arrow-left').on('click', arrowClickChangeMonth);
+        $('.arrow-right').on('click', arrowClickChangeMonth);
+        $('.calendar-cell').on('click', onPressShowDayAndMonth);
 
-      $('.arrow-left').on('click', arrowClickChangeMonth);
-      $('.arrow-right').on('click', arrowClickChangeMonth);
-      $('.calendar-cell').on('click', onPressShowDayAndMonth);
+       /* $('.calendarWrapper').append($('<p class="indicador"></p>'));
+        // $('.indicador').css({'position': 'fixed'});
 
-     /* $('.calendarWrapper').append($('<p class="indicador"></p>'));
-      // $('.indicador').css({'position': 'fixed'});
-
-      $(window).scroll(function(){ 
-        var indicador = $('.indicador').offset(); 
-        // get total scrolling 
-        var footer = $('footer').offset();
-        if((indicador.top + 600) < footer.top){
-          $('.calendarContainer').css({'position': 'fixed'});
-        }else{
-          $('.calendarContainer').css({'position': 'relative'});
-        }
-      });*/
-      break;
+        $(window).scroll(function(){ 
+          var indicador = $('.indicador').offset(); 
+          // get total scrolling 
+          var footer = $('footer').offset();
+          if((indicador.top + 600) < footer.top){
+            $('.calendarContainer').css({'position': 'fixed'});
+          }else{
+            $('.calendarContainer').css({'position': 'relative'});
+          }
+        });*/
+        break;
+    }
+  } else {
+    $('#mainSiteNav').find('li').removeClass('active');
+    $('#mainSiteNav').find('li:last').prev().addClass('active');
+    $('html, body').animate({
+      scrollTop: ($(window.location.hash).offset().top - 120)
+    }, 1000);
+    $(window.location.hash).collapse('toogle');
   }
+
 
   $('.advice').on('click',scrollSmooth);
   $('.audit').on('click',scrollSmooth);

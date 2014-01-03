@@ -10,23 +10,34 @@ block custom-stylesheets
 block content
     
   .container.text-center
-    .span11.service-titles
+    .span12.service-titles
       .span4
         hr
-      .span3
-        h3
-          img(src='/images/iconoCaler.png', alt="Logo",height="35", width="35").pull-left
+      .span4.image-rotate
+        h2
+          img(src='/images/iconoCaler.png', alt="Logo").pull-left
+          img(src='/images/iconoCaler.png', alt="Logo").pull-right
           span Capacitaciones
-          img(src='/images/iconoCaler.png', alt="Logo",height="35", width="35").pull-right
       .span4
         hr
 
     .span11.columns-container.clearfix
       .span4.calendarWrapper.pull-right.hidden-phone
         include calendar
+        p.clearfix
+        hr
+        a.btn.btn-primary.btn-block.btn-large( href = '/capacitaciones/cursos' ) 
+          |Ver todos los cursos
+        br
+
+      - var month = {value: 'febrero'};
+      - var courses = [{id:4 , month: month.value, date:'12 y 13',description:'Elaboración de manuales y documentos de sistemas de gestión de la calidad (normas ISO 19001, ISO 15189, ISO 17025',name: 'Elaboración de manuales y documentos',summary:'#'}, {id:6 , month: month.value,date:'14 y 15',description:'Estimación de la incertidumbre de la medición en ensayos orientado a métodos analíticos',name: 'Estimación de la incertidumbre',summary:'#'}, {id:7 , month: month.value,date:'18 y 19',description:'Formación de auditores internos, bajo la norma ISO 19011:2011 con enfoque en las normas ISO 17189:2012 e ISO/IEC 17025:2005',name: 'Formación de auditores internos',summary:'#'}, {id:15 , month: month.value,date:'20',description:'Taller de interpretación de políticas de EMA (Incertidumbre, trazabilidad y ensayos de aptitud',name: 'Taller de interpretación de políticas de EMA',summary:'#'}, {id:1 , month: month.value,date:'26 y 27',description:'Actualización e implementación de la ISO 15189, los retos de la versión 2012',name: 'Actualización e implementación de la ISO 15189',summary:'#'}, {id:3 , month: month.value,date:'28',description:'Documentación de trazabilidad en las mediciones clínicas',name: 'Documentación de trazabilidad en las mediciones clínicas',summary:'#'}];
       
-      - var month = {value: 'febrero'};   
-      - var courses = [{month: month.value,date:'12 y 13',description:'Elaboración de manuales y documentos de sistemas de gestión de la calidad (normas ISO 19001, ISO 15189, ISO 17025',name: 'Elaboración de manuales y documentos de sistemas de gestión de la calidad (normas ISO 19001, ISO 15189, ISO 17025',summary:'#'}, {month: month.value,date:'14 y 15',description:'Estimación de la incertidumbre de la medición en ensayos orientado a métodos analíticos',name: 'Estimación de la incertidumbre de la medición en ensayos orientado a métodos analíticos',summary:'#'}, {month: month.value,date:'18 y 19',description:'Formación de auditores internos, bajo la norma ISO 19011:2011 con enfoque en las normas ISO 17189:2012 e ISO/IEC 17025:2005',name: 'Formación de auditores internos, bajo la norma ISO 19011:2011 con enfoque en las normas ISO 17189:2012 e ISO/IEC 17025:2005',summary:'#'}, {month: month.value,date:'20',description:'Taller de interpretación de políticas de EMA (Incertidumbre, trazabilidad y ensayos de aptitud',name: 'Taller de interpretación de políticas de EMA (Incertidumbre, trazabilidad y ensayos de aptitud',summary:'#'},{month: month.value,date:'26 y 27',description:'Actualización e implementación de la ISO 15189, los retos de la versión 2012',name: 'Actualización e implementación de la ISO 15189, los retos de la versión 2012',summary:'#'}, {month: month.value,date:'28',description:'Documentación de trazabilidad en las mediciones clínicas',name: 'Documentación de trazabilidad en las mediciones clínicas',summary:'#'}];
+      each course in courses
+        include course-card
+
+      - var month = {value: 'marzo'};
+      - var courses = [ {id:19 , month: month.value,date:'7 y 8',description:'Validación de métodos y control de calidad orientado a métodos analíticos',name: 'Validación de métodos y control de calidad',summary:'#'}, {id:16 , month: month.value,date:'11 y 12',description:'Taller para el tratamiento de No conformidades, Acciones correctivas y acciones preventivas',name: 'Taller para el tratamiento de No conformidades, Acciones correctivas y acciones preventivas',summary:'#'}, {id:20 , month: month.value,date:'13 y 14',description:'Verificación de instrumentos básicos de medición (Termómetros, Balanzas, pipetas y material de vidrio)',name: 'Verificación de instrumentos básicos de medición',summary:'#'},{id:8 , month: month.value, date:'18 y 19',description:'Interpretación de la norma ISO 9001:2008 “Requisitos para un sistema de gestión de la calidad en una organización”',name: 'Interpretación de la norma ISO 9001:2008',summary:'#'}, {id:18 , month: month.value,date:'21 y 22',description:'Validación de métodos microbiológicos en el área de alimentos',name: 'Validación de métodos microbiológicos',summary:'#'}];
       
       each course in courses
         include course-card

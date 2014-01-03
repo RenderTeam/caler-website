@@ -15,29 +15,7 @@ block content
         hr
 
     #accordion.accordion.courses-accordion
-      .accordion-group
-        .accordion-heading.text-left
-          a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', 
-            href='#collapseOne')
-            h4
-              span.course-title Formación de auditores internos
-              span.pull-right 12/13/2014 - 12/15/2014
-        #collapseOne.accordion-body.collapse.in
-          .accordion-inner
-            .text-justify.ghost-after
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu turpis id erat aliquam mollis nec sollicitudin urna. Nunc nec lacinia est, a dapibus risus. Quisque porta ante vel venenatis eleifend. Cras dolor lacus, gravida et placerat non, porta quis neque. Nam porttitor sed sem porta tristique. Aenean quis tempor turpis, id elementum nisi. Nunc interdum ut nulla hendrerit pharetra.
-              ul.pager
-                li
-                  a( href = '', target = '_blank' ) 
-                    |Descargar temario &darr;
-                li
-                  a( href = '/contacto' ) Contacto / Inscripción
-
-      .accordion-group
-        .accordion-heading
-          a.accordion-toggle(data-toggle='collapse', data-parent='#accordion', 
-            href='#collapseTwo')
-            | Collapsible Group Item #2
-        #collapseTwo.accordion-body.collapse
-          .accordion-inner
-            | Anim pariatur cliche...
+      - var courses = [{id:1 , soon: true, next_date:'26/02/2014 - 27/02/2014', description:'', name: 'Actualización e implementación de la ISO 15189, los retos de la versión 2012', summary:'#'},{id:2 , soon: false, next_date:'', description:'', name: 'Curso de metrología básica', summary:'#'},{id:3 , soon: true, next_date:'28/02/2014', description:'', name: 'Documentación de trazabilidad en las mediciones clínicas', summary:'#'},{id:4 , soon: true, next_date:'12/02/2014 y 13/02/2014', description:'', name: 'Elaboración de manuales y documentos de sistemas de gestión de la calidad (normas ISO 9001, ISO 15189, ISO 17025)', summary:'#'},{id:5 , soon: false, next_date:'', description:'', name: 'Establecimiento de indicadores', summary:'#'},{id:6 , soon: true, next_date:'14/02/2014 y 15/02/2014', description:'', name: 'Estimación de la Incertidumbre de la medición en ensayos, orientado a métodos analíticos', summary:'#'},{id:7 , soon: true, next_date:'18/02/2014 y 19/02/2014', description:'', name: 'Formación de auditores internos, norma ISO 19011:2011 con enfoque en las normas ISO 15189:2012 e ISO/IEC 17025:2005', summary:'#'},{id:8 , soon: true, next_date:'18/03/2014 y 19/03/2014', description:'', name: 'Interpretación de la norma ISO 9001:2008 “Requisitos para un sistema de gestión de la calidad en una organización”', summary:'#'},{id:9 , soon: false, next_date:'', description:'', name: 'Interpretación de la norma NMX-EC-17025-IMNC-2006 / ISO 17025:2005 para laboratorios de ensayo y calibración', summary:'#'},{id:10 , soon: false, next_date:'', description:'', name: 'Manejo de RPBI NOM 087', summary:'#'},{id:11 , soon: false, next_date:'', description:'', name: 'Mapeo de procesos', summary:'#'},{id:12 , soon: false, next_date:'', description:'', name: 'Sistemas de gestión de la calidad en bancos de sangre, tomando como base la Norma Oficial Mexicana NOM-253-SSA1-2012', summary:'#'},{id:13 , soon: false, next_date:'', description:'', name: 'Taller de buenas practicas de laboratorio', summary:'#'},{id:14 , soon: false, next_date:'', description:'', name: 'Taller de control de calidad interno para laboratorio clínico', summary:'#'},{id:15 , soon: true, next_date:'20/02/2014', description:'', name: 'Taller de interpretación de políticas de EMA (Incertidumbre, Trazabilidad y Ensayos de Aptitud)', summary:'#'},{id:16 , soon: true, next_date:'11/03/2014 y 12/03/2014', description:'', name: 'Taller para el tratamiento de No conformidades, Acciones correctivas y acciones preventivas', summary:'#'},{id:17 , soon: false, next_date:'', description:'', name: 'Validación de métodos en microbiología clínica', summary:'#'},{id:18 , soon: true, next_date:'21/03/2014 y 22/03/2014', description:'', name: 'Validación de métodos microbiológicos en el área de alimentos', summary:'#'},{id:19 , soon: true, next_date:'7/03/2014 y 8/03/2014', description:'', name: 'Validación de métodos y control de calidad orientado a métodos analíticos', summary:'#'},{id:20 , soon: true, next_date:'13/03/2014 y 14/03/2014', description:'', name: 'Verificación de instrumentos básicos de medición (Termómetros, Balanzas, pipetas y material de vidrio)', summary:'#'}];
+      
+      each course in courses
+        include ../course-collapsable
