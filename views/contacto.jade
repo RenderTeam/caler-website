@@ -7,15 +7,15 @@ block content
       h1 Contacto
       
     .custom-narrow
-      form.well.span10.white
+      form.well.span10.white( method = 'POST' , action = 'contacto.php' )
         .row
           .span3
             label Nombre:
-            input(type="text", class="span3", placeholder="Nombre", required='required')
+            input(type="text", class="span3", placeholder="Nombre", name="nombr" required='required')
             label Correo electrónico:
-            input(type="text", class="span3", placeholder="correo@correo.com", required='required')
+            input(type="text", class="span3", placeholder="correo@correo.com", name="elcorreo", required='required')
             label Asunto: 
-              select.span3(id='asunto', name='asunto',required='required')
+              select.span3(id='asunto', name='asunt' ,required='required')
                 option(value='', selected='')  Escoge uno:
                 option('cotización')  Cotización
                 option('informe') Informes
@@ -25,8 +25,8 @@ block content
 
           .span7
             label Mensaje
-            textarea(name="message", id="message", class="input-xlarge span7", rows="10")
-          button(type="submit", class="btn btn-primary pull-right") Enviar
+            textarea(name="message", id="message", name="elmsg", class="input-xlarge span7", rows="10")
+          button(type="submit", class="btn btn-primary pull-right", name="enviar") Enviar
 
 block custom-scripts
   //for development. We use local scripts

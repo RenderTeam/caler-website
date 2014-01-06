@@ -35,15 +35,15 @@
         <h1>Contacto</h1>
       </div>
       <div class="custom-narrow">
-        <form class="well span10 white">
+        <form method="POST" action="contacto.php" class="well span10 white">
           <div class="row">
             <div class="span3">
               <label>Nombre:</label>
-              <input type="text" placeholder="Nombre" required="required" class="span3">
+              <input type="text" placeholder="Nombre" name="nombr" required="required" class="span3">
               <label>Correo electrónico:</label>
-              <input type="text" placeholder="correo@correo.com" required="required" class="span3">
+              <input type="text" placeholder="correo@correo.com" name="elcorreo" required="required" class="span3">
               <label>Asunto: 
-                <select id="asunto" name="asunto" required="required" class="span3">
+                <select id="asunto" name="asunt" required="required" class="span3">
                   <option value="" selected=""> Escoge uno:</option>
                   <option cotización> Cotización</option>
                   <option informe>Informes</option>
@@ -55,9 +55,9 @@
             </div>
             <div class="span7">
               <label>Mensaje</label>
-              <textarea name="message" id="message" rows="10" class="input-xlarge span7"></textarea>
+              <textarea name="elmsg" id="message" rows="10" class="input-xlarge span7"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+            <button type="submit" name="enviar" class="btn btn-primary pull-right">Enviar</button>
           </div>
         </form>
       </div>
