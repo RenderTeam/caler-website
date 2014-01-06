@@ -20,46 +20,33 @@
           <div class="pull-right slogan-container"><sup><sup>┌</sup></sup>SU SOLUCIÓN EN<br>&nbsp;&nbsp;SISTEMAS DE GESTIÓN<sub><sub>┘</sub></sub></div>
           <div class="nav-collapse collapse">
             <ul id="mainSiteNav" class="nav">
-              <li class="active"><a href="/" class="activeA">Inicio</a></li>
-              <li><a href="/caler.html" class="activeA">¿Quiénes somos?</a></li>
-              <li><a href="/servicios.html" class="activeA">Servicios</a></li>
-              <li><a href="/capacitaciones.html" class="activeA">Capacitaciones</a></li>
-              <li><a href="/contacto.html" class="activeA">Contacto</a></li>
+              <li class="active"><a href="index.html" class="activeA">Inicio</a></li>
+              <li><a href="caler.html" class="activeA">¿Quiénes somos?</a></li>
+              <li><a href="servicios.html" class="activeA">Servicios</a></li>
+              <li><a href="capacitaciones.html" class="activeA">Capacitaciones</a></li>
+              <li><a href="contacto.html" class="activeA">Contacto</a></li>
             </ul>
           </div>
         </div>
       </div>
-    </div><br>
-    <div class="container">
-      <div class="hero-unit text-center">
-        <h1>Contacto</h1>
+    </div>
+    <hr id="layoutLine" class="hidden-phone">
+    <div class="container text-center top-padded">
+      <div class="span11 service-titles">
+        <div class="span4">
+          <hr>
+        </div>
+        <div class="span3 image-rotate">
+          <h2><img src="/images/iconoCaler.png" alt="Logo" class="pull-left"><img src="/images/iconoCaler.png" alt="Logo" class="pull-right"><span>Inscripción</span><br></h2>
+        </div>
+        <div class="span4">
+          <hr>
+        </div>
       </div>
-      <div class="custom-narrow">
-        <form class="well span10 white">
-          <div class="row">
-            <div class="span3">
-              <label>Nombre:</label>
-              <input type="text" placeholder="Nombre" required="required" class="span3">
-              <label>Correo electrónico:</label>
-              <input type="text" placeholder="correo@correo.com" required="required" class="span3">
-              <label>Asunto: 
-                <select id="asunto" name="asunto" required="required" class="span3">
-                  <option value="" selected=""> Escoge uno:</option>
-                  <option cotización> Cotización</option>
-                  <option informe>Informes</option>
-                  <option sugerencias>Sugerencia</option>
-                </select>
-              </label>
-              <label>Curso:</label>
-              <input type="text" placeholder="Nombre del curso a solicitar información" class="span3">
-            </div>
-            <div class="span7">
-              <label>Mensaje</label>
-              <textarea name="message" id="message" rows="10" class="input-xlarge span7"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary pull-right">Enviar</button>
-          </div>
-        </form>
+      <div class="span11">
+        <div class="hero-unit">
+          <h1> ¡Pronto!</h1>
+        </div>
       </div>
     </div>
     <footer>
@@ -80,6 +67,26 @@
             <div class="span2">
               <ul class="unstyled">
                 <li class="header">Servicios</li>
+                <li class="header">Cursos
+                  <ul style="color:white">
+                    <li><a href="cursos/ISO15189">ISO 15189 </a></li>
+                    <li><a href="cursos/ISO17025">ISO 17025</a></li>
+                  </ul>
+                </li>
+                <li class="header">Asesorías
+                  <ul style="color:white">
+                    <li><a href="asesorias/ISO9001">ISO 9001</a></li>
+                    <li><a href="asesorias/ISO15189">ISO 15189 </a></li>
+                    <li><a href="asesorias/ISO17025">ISO 17025</a></li>
+                  </ul>
+                </li>
+                <li class="header">Auditorías
+                  <ul style="color:white">
+                    <li><a href="auditorias/ISO15189">ISO 15189 </a></li>
+                    <li><a href="auditorias/ISO17025">ISO 17025</a></li>
+                  </ul>
+                </li>
+                <li class="header"></li>
               </ul>
             </div>
             <div style="width: 15%;" class="span2">
@@ -117,8 +124,5 @@
     <script src="/javascripts/bootstrap/bootstrap-transition.js"></script>
     <script src="/javascripts/own/indexGallery.js"></script>
     <script src="/javascripts/own/indexFunctions.js"></script>
-    <!--for development. We use local scripts-->
-    <script src="javascripts/angular/angular.min.js"></script>
-    <script src="javascripts/jquery/jquery.min.js"></script>
   </body>
 </html>

@@ -17,7 +17,7 @@ module.exports = function ( grunt ) {
           "render/caler.html": ["views/caler.jade"],
           "render/servicios.html": ["views/servicios.jade"],
           "render/capacitaciones.html": ["views/capacitaciones.jade"],
-          "render/inscripcion.html": ["views/capacitaciones/inscripcion.jade"]
+          "render/cursos.html": ["views/capacitaciones/courses.jade"]
         }
       }
     }
