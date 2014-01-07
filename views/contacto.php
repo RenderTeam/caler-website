@@ -6,6 +6,8 @@
   $elmensaje = wordwrap($elmensaje, 80);                       //dividir el mensaje en trozos de 80 cols
   //Recupear el asunto
   $asunto = $_POST['asunt'];
+  //Recuperar el curso
+  $curso = $_POST['curso'];
   //Formatear un poco el texto que escribio el usuario (asunto) en la caja
   //de comentario con ayuda de HTML
   $cuerpomsg ='
@@ -15,6 +17,7 @@
     </head>
     <body>
       <p>Hola tienes un mensaje en caler.com.mx</p>
+      <p> Con referencia al curso '.$curso.'</p>
       <table>
         <tr>
           <td><b>El mensaje que se dejo dice:</b><br></td>
